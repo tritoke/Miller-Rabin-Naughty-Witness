@@ -6,11 +6,11 @@ The program uses `rayon` to easily parallelise the search across all cores, as w
 ## Results
 | Limit   | Number | Lies told | Time taken for search |
 |---------|--------|-----------|-----------------------|
-| 100     | 38     | 4         | ~1.7ms                |
-| 1000    | 64     | 16        | ~4.4ms                |
-| 10000   | 512    | 68        | ~303.3ms              |
-| 100000  | 4096   | 334       | ~42s                  |
-| 1000000 | 4096   | 1163      | ~1.36 hours           |
+| 100     | 38     | 4         | ~1.5ms                |
+| 1000    | 64     | 16        | ~3.7ms                |
+| 10000   | 512    | 68        | ~244.7ms              |
+| 100000  | 4096   | 334       | ~36s                  |
+| 1000000 | 4096   | 1163      | ~1.24 hours           |
 
 
 It appears to be powers of two after 38, searching 1 million took so long that I don't think I fancy trying 10 million...

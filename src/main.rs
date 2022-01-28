@@ -1,7 +1,7 @@
 use rayon::prelude::*;
 use std::collections::HashMap;
 
-const LIMIT: u64 = 100000;
+const LIMIT: u64 = 1000_000;
 
 fn main() {
     // collect the liars up to the limit
@@ -39,7 +39,7 @@ fn main() {
     println!("{}: {}", elem, count);
 }
 
-fn miller_rabin(n: u64, a: u64) -> bool {
+pub fn miller_rabin(n: u64, a: u64) -> bool {
     fn split_n(n: u64) -> (u64, u64) {
         let x = n - 1;
         let s = x.trailing_zeros() as u64;
