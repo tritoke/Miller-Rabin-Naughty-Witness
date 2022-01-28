@@ -4,10 +4,13 @@ So I saw [this video](https://www.youtube.com/watch?v=_MscGSN5J6o) from Numberph
 The program uses `rayon` to easily parallelise the search across all cores, as well as an implementation of the Miller-Rabin primality test adapted from [the wikipedia article](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test).
 
 ## Results
-|Limit  | Number | Lies told |
-|-------|--------|-----------|
-|100    | 38     | 4         |
-|1000   | 64     | 16        |
-|10000  | 512    | 68        |
-|100000 | 4096   | 334       |
+| Limit   | Number | Lies told | Time taken for search |
+|---------|--------|-----------|-----------------------|
+| 100     | 38     | 4         | ~1.7ms                |
+| 1000    | 64     | 16        | ~4.4ms                |
+| 10000   | 512    | 68        | ~303.3ms              |
+| 100000  | 4096   | 334       | ~42s                  |
+| 1000000 | 4096   | 1163      | ~1.36 hours           |
 
+
+It appears to be powers of two after 38, searching 1 million took so long that I don't think I fancy trying 10 million...
