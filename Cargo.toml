@@ -1,5 +1,5 @@
 [package]
-name = "miller_rabin_star_witness"
+name = "miller_rabin_naughty_witness"
 version = "0.1.0"
 edition = "2021"
 
