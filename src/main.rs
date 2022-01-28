@@ -7,12 +7,12 @@ fn main() {
     // collect the liars up to the limit
     let (elem, count) = (0..=LIMIT)
         .into_par_iter()
+        // witnesses can only lie about non-prime numbers
+        .filter(|&n| !small_n_is_prime(n))
         .flat_map(|n| {
-            // use star witnesses to asses primality
-            let is_prime = small_n_is_prime(n);
             (2..n).into_par_iter().filter(move |&a| {
                 // determine if witness a is a liar
-                miller_rabin(n, a) & !is_prime
+                miller_rabin(n, a)
             })
         })
         .fold(Default::default, |mut acc: HashMap<u64, usize>, elem| {
