@@ -1,7 +1,7 @@
 use rayon::prelude::*;
 use std::collections::HashMap;
 
-const LIMIT: u64 = 1_000_000;
+const LIMIT: u64 = 1000_000;
 
 fn main() {
     // collect the liars up to the limit
